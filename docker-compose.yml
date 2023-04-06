@@ -1,16 +1,5 @@
 version: '3'
 services:
-#  postgres:
-#    image: postgres:13.3
-#    restart: always
-#    environment:
-#      POSTGRES_USER: myuser
-#      POSTGRES_PASSWORD: mypassworde
-#      POSTGRES_DB: mydb
-#    ports:
-#      - "5432:5432"
-#    volumes:
-#      - ./scripts:/docker-entrypoint-initdb.d/
   mysql:
     image: mysql:8.0.26
     restart: always
@@ -20,6 +9,6 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./scripts:/docker-entrypoint-initdb.d/
-      - ./mysql-data:/var/lib/mysql
+      - ./scripts/mydbddl.sql:/docker-entrypoint-initdb.d/mydbddl.sql
+#      - ./mysql-data:/var/lib/mysql
 
