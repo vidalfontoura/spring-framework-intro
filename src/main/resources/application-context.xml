@@ -1,0 +1,51 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Define a bean for the Address class -->
+    <bean id="address1" class="com.plusgrade.ioc.file.client.domain.Address">
+        <property name="street" value="123 Main St." />
+        <property name="city" value="Anytown" />
+        <property name="state" value="CA" />
+        <property name="zip" value="12345" />
+    </bean>
+
+    <!-- Define another bean for the Address class -->
+    <bean id="address2" class="com.plusgrade.ioc.file.client.domain.Address">
+        <property name="street" value="456 Elm St." />
+        <property name="city" value="Anycity" />
+        <property name="state" value="NY" />
+        <property name="zip" value="67890" />
+    </bean>
+
+    <!-- Define a bean for the Client class that has a list of Address beans -->
+    <bean id="client" class="com.plusgrade.ioc.file.client.domain.Client">
+        <property name="name" value="John Doe" />
+        <property name="age" value="30" />
+        <property name="addresses">
+            <list>
+                <ref bean="address1" />
+                <ref bean="address2" />
+            </list>
+        </property>
+    </bean>
+
+
+
+    <!-- Account example -->
+    <bean id="checkingAccount" class="com.plusgrade.ioc.file.account.domain.CheckingAccountImpl" />
+    <bean id="savingsAccount" class="com.plusgrade.ioc.file.account.domain.SavingsAccountImpl" >
+        <property name="interestRate" value="0.02" />
+    </bean>
+
+    <util:map id="accountMap" map-class="java.util.HashMap">
+        <entry key="checking" value-ref="checkingAccount" />
+        <entry key="savings" value-ref="savingsAccount" />
+    </util:map>
+
+
+    <bean id="accountService" class="com.plusgrade.ioc.file.account.service.AccountService">
+        <property name="accountMap" ref="accountMap" />
+    </bean>
+
+</beans>
