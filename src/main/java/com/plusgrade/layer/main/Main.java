@@ -1,9 +1,8 @@
-package com.plusgrade.di.main;
+package com.plusgrade.layer.main;
 
-import com.plusgrade.di.config.MysqlConfig;
-import com.plusgrade.di.config.PostgresConfig;
-import com.plusgrade.di.dao.Dao;
-import com.plusgrade.di.service.MyService;
+import com.plusgrade.layer.config.MysqlConfig;
+import com.plusgrade.layer.config.PostgresConfig;
+import com.plusgrade.layer.service.MyService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 

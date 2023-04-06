@@ -1,6 +1,6 @@
-package com.plusgrade.di.config;
+package com.plusgrade.layer.config;
 
-import com.plusgrade.di.dao.PostgresDaoImpl;
+import com.plusgrade.layer.dao.PostgresDaoImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;

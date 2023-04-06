@@ -1,4 +1,4 @@
-package com.plusgrade.di.dao;
+package com.plusgrade.layer.dao;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;

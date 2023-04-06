@@ -1,4 +1,4 @@
-package com.plusgrade.di.service;
+package com.plusgrade.layer.service;
 
 public interface MyService
 {

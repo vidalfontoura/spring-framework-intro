@@ -1,6 +1,7 @@
 package com.plusgrade.ioc.file.client.domain;
 
-public class Address {
+public class Address
+{
   private String street;
   private String city;
   private String state;
@@ -24,6 +25,7 @@ public class Address {
 
   public void setStreet( String street )
   {
+
     this.street = street;
   }
 
@@ -57,7 +59,8 @@ public class Address {
     this.zip = zip;
   }
 
-  public String toString() {
+  public String toString()
+  {
     return street + ", " + city + ", " + state + " " + zip;
   }
 

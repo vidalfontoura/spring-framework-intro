@@ -1,7 +1,7 @@
-package com.plusgrade.di.service;
+package com.plusgrade.layer.service;
 
 
-import com.plusgrade.di.dao.Dao;
+import com.plusgrade.layer.dao.Dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
